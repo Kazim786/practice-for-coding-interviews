@@ -50,3 +50,22 @@ function isThereAMatch2 (arr1, arr2){
 }
 
 isThereAMatch2(a, b)
+
+//Example of this problem:
+
+const obj = {1: 'a', 2: 'b', 3: 'c'}
+
+const arr = [1, 'b', 'c']
+
+function test (obj, arr){
+  if(obj[arr[0]]){
+  console.log('true')
+} else {
+  console.log('false')
+}
+
+}
+ 
+ test(obj, arr)
+
+ //if array elements match the keys in the object it will be true
