@@ -115,16 +115,19 @@
 //
 
 var runningSum = function(arr) {
-    const sum = arr.map((i) => {
-        for(let i = 0; i < arr.length; i++) {
-            if(i === 0){
-                arr[i] + 0
-                }
-            else {
-                arr[i] + arr[i - 1]
-                }
+    const sum = arr.map((n, nIndex) => {
+      let temp = n
+      for (let i = 0; i < nIndex + 1; i++) {
+        if (i === 0) {
+          temp += 0
+        } else {
+          temp += arr[i - 1]
         }
-        
+      }
+      return temp
     })
+  
     return sum
-};
+  }
+  const arr = [1, 2, 3, 4]
+  console.log(runningSum(arr))
