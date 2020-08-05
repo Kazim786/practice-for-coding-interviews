@@ -71,7 +71,7 @@ function test (obj, arr){
  //if array elements match the keys in the object it will be true
 
  //Another way to redo this in a much nicer cleaner way is this:
-
+//its good to be well acquainted with various JS methods and how they work. It helps simplify the code and makes things easier
  function isThereAMatch3 (arr1, arr2){
      return arr1.some(item => arr2.includes(item))
  }
