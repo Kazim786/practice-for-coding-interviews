@@ -114,20 +114,42 @@
 
 //
 
-var runningSum = function(arr) {
-    const sum = arr.map((n, nIndex) => {
-      let temp = n
-      for (let i = 0; i < nIndex + 1; i++) {
-        if (i === 0) {
-          temp += 0
-        } else {
-          temp += arr[i - 1]
-        }
-      }
-      return temp
-    })
+// var runningSum = function(arr) {
+//     const sum = arr.map((n, nIndex) => {
+//       let temp = n
+//       for (let i = 0; i < nIndex + 1; i++) {
+//         if (i === 0) {
+//           temp += 0
+//         } else {
+//           temp += arr[i - 1]
+//         }
+//       }
+//       return temp
+//     })
   
-    return sum
-  }
-  const arr = [1, 2, 3, 4]
-  console.log(runningSum(arr))
+//     return sum
+//   }
+//   const arr = [1, 2, 3, 4]
+//   console.log(runningSum(arr))
+
+//********************* */
+
+//Exercise 3
+
+//Least Number of Unique Integers after K Removals
+
+//Difficulty Medium
+
+//Given an array of integers arr and an integer k. 
+//Find the least number of unique integers after removing exactly k elements.
+
+// Example 1:
+
+// Input: arr = [5,5,4], k = 1
+// Output: 1
+// Explanation: Remove the single 4, only 5 is left.
+
+// Example 2:
+// Input: arr = [4,3,1,1,3,3,2], k = 3
+// Output: 2
+// Explanation: Remove 4, 2 and either one of the two 1s or three 3s. 1 and 3 will be left.
