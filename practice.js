@@ -69,3 +69,11 @@ function test (obj, arr){
  test(obj, arr)
 
  //if array elements match the keys in the object it will be true
+
+ //Another way to redo this in a much nicer cleaner way is this:
+
+ function isThereAMatch3 (arr1, arr2){
+     return arr1.some(item => arr2.includes(item))
+ }
+
+ isThereAMatch3(a, b)
