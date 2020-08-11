@@ -60,3 +60,8 @@ numbers1.forEach(function(num, index) {
     console.log(index, num)
 })
 
+
+//*************** */
+
+//Map 
+
