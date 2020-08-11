@@ -45,3 +45,9 @@ books.forEach((book) => { //book in the parameter represents each object.
 
 //Remember when using anonymous functions like the one above inside of the forEach method
 //The parameter represents each element. So book here represents each element or each book
+
+//forOf is an alternative which is similar
+
+for(let book of books){
+    console.log(book.title)
+}
