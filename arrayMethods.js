@@ -51,3 +51,12 @@ books.forEach((book) => { //book in the parameter represents each object.
 for(let book of books){
     console.log(book.title)
 }
+
+
+const numbers1 = [20, 21, 22, 23, 24, 25, 26, 27]
+
+//second argument in forEach is the index
+numbers1.forEach(function(num, index) {
+    console.log(index, num)
+})
+
