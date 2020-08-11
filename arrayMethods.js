@@ -72,4 +72,31 @@ const doubled = numbers2.map(function(number){
     return number * 2
 })
 
+//Example 2 of MAP:
+const isEven = numbers2.map(function(number){
+    return {
+        value: number,
+        isEven: number % 2 === 0
+    }
+})
+
+console.log(isEven)
+
+//Example 3
+
+//Split the words in the array into letters with period in between and make all letters uppercase
+const words = ['asap', 'byob', 'rsvp', 'diy']
+
+const allCapsWithPeriod = words.map(function(word){
+    return word.toUpperCase().split('').join('.')
+})
+
+//or you can use forOf
+const upperCase = []
+for(let word of words){
+   upperCase.push(word.toUpperCase().split('').join('.')) 
+}
+
+
+
 
