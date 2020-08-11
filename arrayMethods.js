@@ -44,4 +44,4 @@ books.forEach((book) => { //book in the parameter represents each object.
 })
 
 //Remember when using anonymous functions like the one above inside of the forEach method
-//The parameter represents each object. So book here represents each object or each book
+//The parameter represents each element. So book here represents each element or each book
