@@ -199,6 +199,7 @@
 
 
 
+
 const candies = [2,3,5,1,3]
 
 const extraCandies = 3;
@@ -207,9 +208,19 @@ var kidsWithCandies = (candies, extraCandies) => {
     
   var max = candies.reduce(function(a, b) {
     return Math.max(a, b);
-    
   });
+
   console.log(max)
+
+for(let i = 0; i < candies.length; i++){
+  if(candies[i] === max){
+    return true
+  } else if (candies[i] < max){
+    return false
+  } 
 };
+
+}
+  
 
 console.log(kidsWithCandies(candies, extraCandies))
