@@ -228,7 +228,11 @@ for(let i = 0; i < candies.length; i++){
 };
 
 
-//if extraCandies is added to 
+//if extraCandies is added to a number and that number is > (greater than max) 
+//than that number will return true
+
+//if extraCandies is added to a number that is equal to min and that number is < (less than max) than it will return false
+//if extraCandies is added to a number that is equal to min and that number is > (greater than max) than it will return true
 
 }
   
