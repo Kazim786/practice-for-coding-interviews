@@ -204,7 +204,7 @@
 const candies = [2,3,5,1,3]
 
 const extraCandies = 3;
-
+//COULD USE FOREACH METHOD ON ARRAY
 
 
 
