@@ -200,6 +200,7 @@
 
 
 
+
 const candies = [2,3,5,1,3]
 
 const extraCandies = 3;
@@ -210,7 +211,13 @@ var kidsWithCandies = (candies, extraCandies) => {
     return Math.max(a, b);
   });
 
+  var min = candies.reduce(function(a, b) {
+    return Math.min(a, b);
+  });
+  console.log(min)
   console.log(max)
+
+  
 
 for(let i = 0; i < candies.length; i++){
   if(candies[i] === max){
@@ -219,6 +226,9 @@ for(let i = 0; i < candies.length; i++){
     return false
   } 
 };
+
+
+//if extraCandies is added to 
 
 }
   
