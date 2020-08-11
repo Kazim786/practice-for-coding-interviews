@@ -268,7 +268,11 @@ console.log(kidsWithCandies(candies, extraCandies))
 
 //Gonna try with forEach 
 
-const minMax = (candies) => {
+
+
+var kidsWithCandies = (candies, extraCandies) => {
+    
+    //This can be its own function
     var max = candies.reduce(function(a, b) {
         return Math.max(a, b);
       });
@@ -279,11 +283,6 @@ const minMax = (candies) => {
       console.log(min)
       console.log(max)
 }
-
-var kidsWithCandies = (candies, extraCandies) => {
-    
-    //This can be its own function
-  minMax(candies)
 
     if(candies[i] === max){
     return true
