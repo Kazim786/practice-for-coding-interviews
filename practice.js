@@ -206,20 +206,23 @@ const candies = [2,3,5,1,3]
 const extraCandies = 3;
 //COULD USE FOREACH METHOD ON ARRAY
 
+const minMax = (candies) => {
+    var max = candies.reduce(function(a, b) {
+        return Math.max(a, b);
+      });
+    
+      var min = candies.reduce(function(a, b) {
+        return Math.min(a, b);
+      });
+      console.log(min)
+      console.log(max)
+}
 
 
 var kidsWithCandies = (candies, extraCandies) => {
     
     //This can be its own function
-  var max = candies.reduce(function(a, b) {
-    return Math.max(a, b);
-  });
-
-  var min = candies.reduce(function(a, b) {
-    return Math.min(a, b);
-  });
-  console.log(min)
-  console.log(max)
+  minMax(candies)
 
   
 
