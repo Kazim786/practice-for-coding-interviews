@@ -228,6 +228,13 @@ for(let i = 0; i < candies.length; i++){
 };
 
 
+//Plan of action
+// const arr = [2,3,5,1,3]
+
+// arr[0] = arr[0] + extraCandies
+
+// console.log(arr[0])
+
 //if extraCandies is added to a number and that number is > (greater than max) 
 //than that number will return true
 
