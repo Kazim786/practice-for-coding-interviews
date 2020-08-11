@@ -42,3 +42,6 @@ const books = [
 books.forEach((book) => { //book in the parameter represents each object.
     console.log(book.title)
 })
+
+//Remember when using anonymous functions like the one above inside of the forEach method
+//The parameter represents each object. So book here represents each object or each book
