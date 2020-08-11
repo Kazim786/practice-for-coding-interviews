@@ -232,7 +232,7 @@ for(let i = 0; i < candies.length; i++){
     else if (candies[i] = candies[i] + extraCandies > max){
     return true
     }
-    else if (candies [i] === min && candies[i]){
+    else if (candies [i] === min){
         //> max
         candies[i] = candies[i] + extraCandies
         if(candies[i] > max){
@@ -262,3 +262,48 @@ for(let i = 0; i < candies.length; i++){
   
 
 console.log(kidsWithCandies(candies, extraCandies))
+
+//Gonna try with forEach 
+
+const minMax = (candies) => {
+    var max = candies.reduce(function(a, b) {
+        return Math.max(a, b);
+      });
+    
+      var min = candies.reduce(function(a, b) {
+        return Math.min(a, b);
+      });
+      console.log(min)
+      console.log(max)
+}
+
+var kidsWithCandies = (candies, extraCandies) => {
+    
+    //This can be its own function
+  minMax(candies)
+
+    if(candies[i] === max){
+    return true
+    } else if (candies[i] = candies[i] + extraCandies < max){
+    return false
+    } 
+    else if (candies[i] = candies[i] + extraCandies > max){
+    return true
+    }
+    else if (candies [i] === min && candies[i]){
+        //> max
+        candies[i] = candies[i] + extraCandies
+        if(candies[i] > max){
+            return true
+        } else if(candies[i] < max){
+            return false
+        }
+    
+        } 
+    };
+
+
+
+candies.forEach(i => )
+  
+
