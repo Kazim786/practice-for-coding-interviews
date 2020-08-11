@@ -63,5 +63,6 @@ numbers1.forEach(function(num, index) {
 
 //*************** */
 
-//Map 
+//Map -- Creates a new array from an existing array
+
 
