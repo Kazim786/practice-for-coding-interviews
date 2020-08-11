@@ -65,4 +65,11 @@ numbers1.forEach(function(num, index) {
 
 //Map -- Creates a new array from an existing array
 
+//Anonymous function's first parameter represents each element in the array
+const numbers2 = [20, 21, 22, 23, 24, 25, 26, 27]
+
+const doubled = numbers2.map(function(number){
+    return number * 2
+})
+
 
