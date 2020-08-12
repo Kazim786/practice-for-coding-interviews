@@ -335,8 +335,43 @@ var defangIPaddr = function(address) {
 // S and J will consist of letters and have length at most 50.
 // The characters in J are distinct.
 
-var numJewelsInStones = function(J, S) {
+    //Idea
     //can make both J & S into arrays
     //use the map function to put letters that are shared among them into that array
     //return the length of the new array
+
+
+let J = "aA", S = "aAAbbbb"
+
+
+//In case length of S is less than J I added conditional
+
+let J = "ZZz", S = "z"
+
+
+var numJewelsInStones = function(J, S) {
+  const arr = []
+
+  if(J.length < S.length){
+    for(let i = 0; i < S.length; i++){
+      for(let j = 0; j < S.length; j++){
+        if(J[i] === S[j]){
+          arr.push(J[i])
+        }
+      }
+    }
+  }
+  else {
+    for(let i = 0; i < J.length; i++){
+      for(let j = 0; j < J.length; j++){
+        if(J[i] === S[j]){
+          arr.push(J[i])
+        }
+      }
+    }
+  }
+    
+  return console.log(arr.length) 
 };
+
+console.log(numJewelsInStones(J, S))
