@@ -286,13 +286,24 @@ console.log(kidsWithCandies(candies, extraCandies))
 
 //Exercise 5
 
-//1512. Number of Good Pairs
+//1108. Defanging an IP Address
 
-// Given an array of integers nums.
+// Given a valid (IPv4) IP address, return a defanged version of that IP address.
 
-// A pair (i,j) is called good if nums[i] == nums[j] and i < j.
-
-// Return the number of good pairs.
+// A defanged IP address replaces every period "." with "[.]".
 
  
+
+// Example 1:
+
+// Input: address = "1.1.1.1"
+// Output: "1[.]1[.]1[.]1"
+// Example 2:
+
+// Input: address = "255.100.50.0"
+// Output: "255[.]100[.]50[.]0"
+
+var defangIPaddr = function(address) {
+    
+};
 
