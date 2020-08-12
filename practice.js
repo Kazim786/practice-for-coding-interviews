@@ -336,5 +336,7 @@ var defangIPaddr = function(address) {
 // The characters in J are distinct.
 
 var numJewelsInStones = function(J, S) {
-    
+    //can make both J & S into arrays
+    //use the map function to put letters that are shared among them into that array
+    //return the length of the new array
 };
