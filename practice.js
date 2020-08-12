@@ -334,3 +334,7 @@ var defangIPaddr = function(address) {
 
 // S and J will consist of letters and have length at most 50.
 // The characters in J are distinct.
+
+var numJewelsInStones = function(J, S) {
+    
+};
