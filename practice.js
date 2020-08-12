@@ -469,10 +469,11 @@ var smallerNumbersThanCurrent = function(nums) {
     //Gonna use for Loop or forOf
     let smaller = 0;
     //might have to use while too 
-    for(let n of nums){
-        if(n >  [...nums]){
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] >  nums[4]){
             smaller = smaller + 1
-            return output.push(smaller)
+             output.push(smaller)
+             return console.log(output)
         }
     }
 };
