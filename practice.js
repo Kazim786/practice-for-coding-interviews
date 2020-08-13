@@ -463,6 +463,8 @@ console.log(numberOfSteps(123));
 // 2 <= nums.length <= 500
 // 0 <= nums[i] <= 100
 
+
+//gonna have to use max and min methods
 const nums = [8,1,2,2,3]
 const output = []
 var smallerNumbersThanCurrent = function(nums) {
@@ -470,10 +472,37 @@ var smallerNumbersThanCurrent = function(nums) {
     let smaller = 0;
     //might have to use while too 
     for(let i = 0; i < nums.length; i++){
-        if(nums[i] >  nums[4]){
+        if(nums[i] >  nums[i + 1]){
+            //Have to find a way for the numbs[] on the less than side of the sign to evaluate every element
             smaller = smaller + 1
              output.push(smaller)
              return console.log(output)
         }
     }
 };
+
+//trying different approach
+
+var smallerNumbersThanCurrent = (nums) => {
+    const output = []
+
+    const max = nums.reduce(function(a, b) {
+        return Math.max(a, b);
+    });
+
+    const min = nums.reduce(function(a, b) {
+        return Math.min(a, b);
+    });
+
+
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] === max){
+        output.push(nums.length - 1)
+        } else if (nums[i] === min){
+            output.push(0)
+      }
+      else if (nums[i] < max && nums[i] > min){
+            //how to compare with rest of the elements in the array
+      }
+    }
+  }
