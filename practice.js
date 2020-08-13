@@ -500,9 +500,9 @@ var smallerNumbersThanCurrent = (nums) => {
         output.push(nums.length - 1)
         } else if (nums[i] === min){
             output.push(0)
-      }
-      else if (nums[i] < max && nums[i] > min){
-            //how to compare with rest of the elements in the array
-      }
+        }
+        else if (nums[i] < max && nums[i] > min){
+            //how do i compare with rest of the elements in the array?
+        } 
     }
-  }
+    }
