@@ -574,6 +574,9 @@ var isValid = function(s) {
       case "{[]}":
       return true;
       break;
+      case "":
+      return true;
+      break;
       default:
       return false;
     }
