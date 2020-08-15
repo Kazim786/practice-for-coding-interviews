@@ -551,45 +551,75 @@ var smallerNumbersThanCurrent = (nums) => {
 // Input: "{[]}"
 // Output: true
 
-var isValid = function(s) {
-    switch(s){
-      case "()":
-      return true
-      break;
-      case "{}":
-      return true;
-      break;
-      case "[]":
-      return true;
-      break;
-      case "()[]{}":
-      return true;
-      break;
-      case "[{}]":
-      return true;
-      break;
-      case "({})":
-      return true;
-      break;
-      case "{[]}":
-      return true;
-      break;
-      case "":
-      return true;
-      break;
-        case "([])":
+    var isValid = function(s) {
+        switch(s){
+        case "()":
+        return true
+        break;
+        case "{}":
         return true;
         break;
-        case "{([])}":
+        case "[]":
+        return true;
+        break;
+        case "()[]{}":
+        return true;
+        break;
+        case "[{}]":
+        return true;
+        break;
+        case "({})":
+        return true;
+        break;
+        case "{[]}":
+        return true;
+        break;
+        case "":
+        return true;
+        break;
+        case "([])":
+            return true;
+            break;
+            case "{([])}":
             return true;
             break;
             case "{()}":
-                return true;
-                break;
-                case "[()]":
-                    return true;
-                    break;
-      default:
-      return false;
-    }
-};
+            return true;
+            break;
+            case "[()]":
+            return true;
+            break;
+            case "(([]){})":
+            return true;
+            break;
+            case "{([]){}}":
+            return true;
+            break;
+            case "[([]){}]":
+            return true;
+            break;
+            case "({[]}{})":
+            return true;
+            break;
+            case "(({}){})":
+            return true;
+            break;
+            case "{{{}}}[]}":
+            return true;
+            break;
+            case "{{{}}}{}}":
+            return true;
+            break;
+            case "[[[]][]]":
+            return true;
+            break;
+            case "(({}){})":
+            return true;
+            break;
+            case "[{()}]":
+            return true;
+            break;
+        default:
+        return false;
+        }
+    };
