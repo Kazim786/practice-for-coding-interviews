@@ -577,6 +577,8 @@ function isValidParenthesis(parenthesis)
 
 
       if(parenthesis[i] == parenthesisMatch[stack[stack.length-1]])
+      //Dynamic way of comparing the last element in the stack array inside the parenthesisMatch object
+      //to parenthesis or any bracket that is passed into the array
       {
         console.log(stack.length)
         stack.pop()
@@ -603,3 +605,47 @@ function isValidParenthesis(parenthesis)
 
 isValidParenthesis(pt)
 
+
+//****************
+
+//Happy Number
+
+num = 19
+
+
+function isHappyNumber(number)
+{
+
+  if(number === 1)
+  {
+    return true
+  }
+  
+  while(number !== 1) {
+    let stringNum = number.toString()
+
+    let count = 0
+    for(let i = 0; i < stringNum.length; i++) {
+    count = Math.pow(Number(stringNum[i]), 2) + count
+
+     }
+
+  number = count
+  console.log(number)
+
+  if(number === 1)
+  {
+    return true
+  }
+  else if (number === 4 || number === 0)
+  {
+    return false
+  }
+
+  }
+
+
+}
+
+
+isHappyNumber(num)
