@@ -688,6 +688,8 @@ function fizzBuzz(n) {
         //validAnagram('', '') //true
         //validAnagram('aaz', 'zza') //false
         
+
+        //IDEA: THINK ABOUT THE IN OPERATOR
         const validAnagram = (str1, str2) => {
             str1 = str1.toLowerCase()
             str2 = str2.toLowerCase()
@@ -736,7 +738,7 @@ function fizzBuzz(n) {
 
 
         //****************** */
-
+            //IMPORTANT
 
         // 121. Best Time to Buy and Sell Stock
 
@@ -745,6 +747,9 @@ function fizzBuzz(n) {
 // If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
 
 // Note that you cannot sell a stock before you buy one.
+
+
+
 
 // Example 1:
 
@@ -758,9 +763,60 @@ function fizzBuzz(n) {
 // Output: 0
 // Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
+
+
+//design an algorithm to find the maximum profit.!!!!
+
+//So like in example 1, the max profit would be subtracting 1 with 6
         var maxProfit = function(prices) {
             //selling price > buying price
             //you can only buy 1 and sell 1 stock
             //if no transaction is done the max-profit should return 0
         };
 
+
+
+
+
+//********************* */
+
+//1328. Break a Palindrome
+
+
+
+// Given a palindromic string palindrome, replace exactly one character by any lowercase English letter so that the string becomes the lexicographically smallest possible string that isn't a palindrome.
+
+// After doing so, return the final string.  If there is no way to do so, return the empty string.
+
+ 
+
+// Example 1:
+
+// Input: palindrome = "abccba"
+// Output: "aaccba"
+// Example 2:
+
+// Input: palindrome = "a"
+// Output: ""
+
+
+
+
+
+var breakPalindrome = function(palindrome) {
+    if(palindrome.length === 1){
+        return ""
+    } else{
+        
+        palindrome = palindrome.split('')
+        
+        // palindrome.pop()
+        palindrome[palindrome.length-1] = 's'
+        palindrome = palindrome.join('')
+        
+          return palindrome
+    }
+};
+
+// meets this condition: replace exactly one character by any lowercase
+//Still leetcode is giving wrong answer error
