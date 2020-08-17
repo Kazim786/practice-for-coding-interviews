@@ -675,3 +675,61 @@ function fizzBuzz(n) {
     
     
     fizzBuzz(30)
+
+    //*************** */
+
+    //Anagram Problem
+
+    //Given 2 strings, write a function to determine if the 
+    //2nd string is an anagram of the first. An anagram is a wor, phase, or name formed by 
+    //rearranging the letters of another, such as cinema, formed from iceman
+
+        //example:
+        //validAnagram('', '') //true
+        //validAnagram('aaz', 'zza') //false
+        
+        const validAnagram = (str1, str2) => {
+            str1 = str1.toLowerCase()
+            str2 = str2.toLowerCase()
+            const frequency1 = {}
+            const frequency2 = {}
+
+            //if lengths of string isnt the same automatically make it false
+
+            if(str1.length !== str2.length){
+                return false
+            }
+
+            //putting letters of the strings with their frequencies in the objects
+            for(let letter of str1){
+                if(!frequency1[letter]){
+                    frequency1[letter] = 1
+                } 
+                else {
+                    frequency1[letter]++
+                }
+            }
+            for(let letter of str2){
+                if(!frequency2[letter]){
+                    frequency2[letter] = 1
+                } 
+                else {
+                    frequency2[letter]++
+                }
+            }
+
+            for(let char in frequency1){
+                if(!(frequency2[char])){
+                    return false
+                } 
+                else if(frequency2[char] !== frequency1[char]){
+                    console.log(char)
+                    return false
+                }
+                else{
+                    return true
+                }
+            }
+
+        }
+
