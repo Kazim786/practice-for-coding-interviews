@@ -820,3 +820,5 @@ var breakPalindrome = function(palindrome) {
 
 // meets this condition: replace exactly one character by any lowercase
 //Still leetcode is giving wrong answer error
+
+//But if i do this: palindrome[1] = 'a' instead of palindrome[palindrome.length-1] = 's' the answer is accepted
