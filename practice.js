@@ -817,7 +817,9 @@ var breakPalindrome = function(palindrome) {
         
           return palindrome
     }
-};
+}; 
+
+breakPalindrome("hssh") //This test case proves the code isnt foolproof
 
 // meets this condition: replace exactly one character by any lowercase
 //Still leetcode is giving wrong answer error
