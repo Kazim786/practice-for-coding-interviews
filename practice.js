@@ -806,7 +806,13 @@ var breakPalindrome = function(palindrome) {
         palindrome = palindrome.split('')
         
         // palindrome.pop()
-        palindrome[palindrome.length-1] = 's'
+        if(palindrome[0] !== 's' ){
+            palindrome[1] = 's'
+        }
+        else {
+            palindrome[1] = 'h'
+        }
+        
         palindrome = palindrome.join('')
         
           return palindrome
