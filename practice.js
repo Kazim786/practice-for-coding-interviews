@@ -863,6 +863,8 @@ const breakPalindrome = (palindrome) => {
      if(char > 1){
        //have to replace with letter that isnt in the string so to avoid palindrome
       // console.log([char])
+
+      //This replacement is flawed because what is the entire string is full of the same letter
       palindrome2 = palindrome.replace(palindrome[1], palindrome[palindrome.length - 1])
     }
   }
