@@ -693,49 +693,44 @@ function fizzBuzz(n) {
         const validAnagram = (str1, str2) => {
             str1 = str1.toLowerCase()
             str2 = str2.toLowerCase()
-            const frequency1 = {}
-            // const frequency2 = {}
+              const frequency1 = {}
+              const frequency2 = {}
+  
+  
+              //putting letters of the strings with their frequencies in the objects
+              for(let letter of str1){
+                  if(!frequency1[letter]){
+                      frequency1[letter] = 1
+                  } 
+                  else {
+                      frequency1[letter]++
+                  }
+              }
+              for(let letter of str2){
+                  if(!frequency2[letter]){
+                      frequency2[letter] = 1
+                  } 
+                  else {
+                      frequency2[letter]++
+                  }
+              }
+              console.log(frequency1)
+              console.log(frequency2)
+              for(let char in frequency1){
+                  if(!(frequency2[char])){
+                      return false
+                  } 
+                  else if(frequency2[char] !== frequency1[char]){
+                      console.log(frequency1[char])
+                      return false
+                  }
+                  
+  
+              }
+             return true 
+          }
 
-            //if lengths of string isnt the same automatically make it false
-
-            if(str1.length !== str2.length){
-                return false
-            }
-
-            //putting letters of the strings with their frequencies in the objects
-            for(let letter of str1){
-                if(!frequency1[letter]){
-                    frequency1[letter] = 1
-                } 
-                else {
-                    frequency1[letter]++
-                }
-            }
-
-            for(let letter of str2){
-                if(!frequency2[letter]){
-                    frequency2[letter] = 1
-                } 
-                else {
-                    frequency2[letter]++
-                }
-            }
-
-            for(let char in frequency1){
-                if(!(frequency2[char])){
-                    return false
-                } 
-                else if(frequency2[char] !== frequency1[char]){
-                    console.log(char)
-                    return false
-                }
-                else{
-                    return true
-                }
-            }
-
-        }
-
+          // IT WORKS^^^ :D
 
         //****************** */
             //IMPORTANT
