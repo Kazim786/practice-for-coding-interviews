@@ -551,75 +551,55 @@ var smallerNumbersThanCurrent = (nums) => {
 // Input: "{[]}"
 // Output: true
 
-    var isValid = function(s) {
-        switch(s){
-        case "()":
-        return true
-        break;
-        case "{}":
-        return true;
-        break;
-        case "[]":
-        return true;
-        break;
-        case "()[]{}":
-        return true;
-        break;
-        case "[{}]":
-        return true;
-        break;
-        case "({})":
-        return true;
-        break;
-        case "{[]}":
-        return true;
-        break;
-        case "":
-        return true;
-        break;
-        case "([])":
-            return true;
-            break;
-            case "{([])}":
-            return true;
-            break;
-            case "{()}":
-            return true;
-            break;
-            case "[()]":
-            return true;
-            break;
-            case "(([]){})":
-            return true;
-            break;
-            case "{([]){}}":
-            return true;
-            break;
-            case "[([]){}]":
-            return true;
-            break;
-            case "({[]}{})":
-            return true;
-            break;
-            case "(({}){})":
-            return true;
-            break;
-            case "{{{}}}[]}":
-            return true;
-            break;
-            case "{{{}}}{}}":
-            return true;
-            break;
-            case "[[[]][]]":
-            return true;
-            break;
-            case "(({}){})":
-            return true;
-            break;
-            case "[{()}]":
-            return true;
-            break;
-        default:
-        return false;
-        }
-    };
+function isValidParenthesis(parenthesis)      
+{
+
+  const stack = []
+  const parenthesisMatch = {'(':')' , '[':']', '{':'}'}
+  let isValid = false
+  let rightSide = 0
+
+  for (let i = 0; i < parenthesis.length; i++) {
+    if (parenthesis[i] in parenthesisMatch) {
+      //console.log(parenthesis[i])
+      stack.push(parenthesis[i])
+      //console.log(stack[stack.length-1])
+      //console.log(stack)
+    }
+    else
+    { 
+      //console.log(parenthesis[i])
+      //console.log(parenthesisMatch[stack[stack.length-1]])
+      if (stack.length == 0)
+      {
+        return false // this is if we have extra rightSide parenthesis in the right side 
+      }
+
+
+      if(parenthesis[i] == parenthesisMatch[stack[stack.length-1]])
+      {
+        console.log(stack.length)
+        stack.pop()
+        console.log(stack.length)
+      }
+      else 
+      {
+        return false
+      }
+      
+      //console.log(stack[stack.length-1])
+
+    }
+    console.log(stack.length)
+  }
+
+  if (stack.length === 0 && rightSide === 0) {
+      isValid = true
+    }
+    
+    return isValid
+}
+
+
+isValidParenthesis(pt)
+
