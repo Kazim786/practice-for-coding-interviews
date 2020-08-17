@@ -847,6 +847,31 @@ const breakPalindrome = (palindrome) => {
 breakPalindrome("hssh")
 
 
+
+//Having trouble with this test case breakPalindrome("aa") & breakPalindrome("aaaa")
+
+//This is newest version of the code
+
+const breakPalindrome = (palindrome) => {
+    if(palindrome.length === 1){
+        return ""
+    } 
+ 
+  let palindrome2 = ''
+
+  for(let i = 0; i < palindrome.length; i++){
+     if(char > 1){
+       //have to replace with letter that isnt in the string so to avoid palindrome
+      // console.log([char])
+      palindrome2 = palindrome.replace(palindrome[1], palindrome[palindrome.length - 1])
+    }
+  }
+ 
+return palindrome2
+}
+
+breakPalindrome("aaaa")
+
 // meets this condition: replace exactly one character by any lowercase
 //Still leetcode is giving wrong answer error
 
