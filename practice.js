@@ -798,28 +798,54 @@ function fizzBuzz(n) {
 
 
 
-var breakPalindrome = function(palindrome) {
+// var breakPalindrome = function(palindrome) {
+//     if(palindrome.length === 1){
+//         return ""
+//     } else{
+        
+//         palindrome = palindrome.split('')
+        
+//         // palindrome.pop()
+//         if(palindrome[0] !== 's' ){
+//             palindrome[1] = 's'
+//         }
+//         else {
+//             palindrome[1] = 'h'
+//         }
+        
+//         palindrome = palindrome.join('')
+        
+//           return palindrome
+//     }
+// }; 
+
+//breakPalindrome("hssh") This test case proves the code isnt foolproof
+
+
+//CAME UP WITH THE BETTER SOLUTION WHICH WORKS WITH THIS TEST CASE TOO:
+
+
+const breakPalindrome = (palindrome) => {
     if(palindrome.length === 1){
         return ""
-    } else{
-        
-        palindrome = palindrome.split('')
-        
-        // palindrome.pop()
-        if(palindrome[0] !== 's' ){
-            palindrome[1] = 's'
-        }
-        else {
-            palindrome[1] = 'h'
-        }
-        
-        palindrome = palindrome.join('')
-        
-          return palindrome
-    }
-}; 
+    } 
+ 
+  let palindrome2 = ''
 
-breakPalindrome("hssh") //This test case proves the code isnt foolproof
+  for(let i = 0; i < palindrome.length; i++){
+    if(palindrome[palindrome.length -1] === palindrome[0])
+    {
+      // console.log(char)
+      palindrome2 = palindrome.replace(palindrome[1], palindrome[palindrome.length - 1])
+     
+    }
+  return palindrome2
+};
+}
+
+
+breakPalindrome("hssh")
+
 
 // meets this condition: replace exactly one character by any lowercase
 //Still leetcode is giving wrong answer error
