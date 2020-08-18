@@ -937,5 +937,6 @@ breakPalindrome("aa")
 const isValid = (parenthesis) => {
     const theParenthesis = {'[':']', '{': '}', '(':')'}
 
-
+     //check and see if the number of the 
+     //left side is equal to the number of the closing brackets (right side)
 };
