@@ -698,41 +698,49 @@ function fizzBuzz(n) {
   
   
               //putting letters of the strings with their frequencies in the objects
-              for(let letter of str1){
-                  if(!frequency1[letter]){
-                      frequency1[letter] = 1
-                  } 
-                  else {
-                      frequency1[letter]++
-                  }
-              }
-              for(let letter of str2){
-                  if(!frequency2[letter]){
-                      frequency2[letter] = 1
-                  } 
-                  else {
-                      frequency2[letter]++
-                  }
-              }
-              console.log(frequency1)
-              console.log(frequency2)
-              for(let char in frequency1){
-                  if(!(frequency2[char])){
-                      return false
-                  } 
-                  else if(frequency2[char] !== frequency1[char]){
-                      console.log(frequency1[char])
-                      return false
-                  }
-                  
-  
-              }
-             return true 
-          }
+                for(let letter of str1){
+                    if(!frequency1[letter]){
+                        frequency1[letter] = 1
+                    } 
+                    else {
+                        frequency1[letter]++
+                    }
+                }
+                for(let letter of str2){
+                    if(!frequency2[letter]){
+                        frequency2[letter] = 1
+                    } 
+                    else {
+                        frequency2[letter]++
+                    }
+                }
+                console.log(frequency1)
+                console.log(frequency2)
+                for(let char in frequency1){
+                    if(!(frequency2[char])){
+                        return false
+                    } 
+                    else if(frequency2[char] !== frequency1[char]){
+                        console.log(frequency1[char])
+                        return false
+                    }
+                    
+    
+                }
+                return true 
+            }
 
           // IT WORKS^^^ :D
 
+
+
+
+
+
+
+
         //****************** */
+        //CHASE QUESTIONS
             //IMPORTANT
 
         // 121. Best Time to Buy and Sell Stock
@@ -887,3 +895,45 @@ breakPalindrome("aa")
 //Still leetcode is giving wrong answer error
 
 //But if i do this: palindrome[1] = 'a' instead of palindrome[palindrome.length-1] = 's' the answer is accepted
+
+
+//**************************** */
+
+//My Own isValid Parenthesis code:
+
+//20. Valid Parentheses
+
+// Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+// An input string is valid if:
+
+// Open brackets must be closed by the same type of brackets.
+// Open brackets must be closed in the correct order.
+// Note that an empty string is also considered valid.
+
+// Example 1:
+
+// Input: "()"
+// Output: true
+// Example 2:
+
+// Input: "()[]{}"
+// Output: true
+// Example 3:
+
+// Input: "(]"
+// Output: false
+// Example 4:
+
+// Input: "([)]"
+// Output: false
+// Example 5:
+
+// Input: "{[]}"
+// Output: true
+
+
+const isValid = (parenthesis) => {
+    const theParenthesis = {'[':']', '{': '}', '(':')'}
+    
+};
