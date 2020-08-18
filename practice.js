@@ -935,8 +935,21 @@ breakPalindrome("aa")
 
 
 const isValid = (parenthesis) => {
-    const theParenthesis = {'[':']', '{': '}', '(':')'}
-
+    if(typeof(parenthesis) !== "string" ){
+      return false
+    }
+    const countOfParen = {}
      //check and see if the number of the 
      //left side is equal to the number of the closing brackets (right side)
+        for(let i = 0; i < parenthesis.length; i++){
+            if(parenthesis[i] === '(' || parenthesis[i] === '{' || parenthesis[i] === '[' ||parenthesis[i] === ')' || parenthesis[i] === '}' || parenthesis[i] === ']'){
+            countOfParen[parenthesis[i]] = 1
+            }
+            else {
+                countOfParen[parenthesis[i]]++
+            }
+        }
+        for(let bracket in countOfParen) {
+            
+        }
 };
