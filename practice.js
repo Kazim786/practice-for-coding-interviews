@@ -860,9 +860,6 @@ const breakPalindrome = (palindrome) => {
     } 
   const alphabetArr = ("abcdefghijklmnopqrstuvwxyz").split("")
 
-  for(let letter of alphabetArr){
-
-  }
 
   let palindrome2 = ''
 
