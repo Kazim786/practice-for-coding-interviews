@@ -626,7 +626,7 @@ function isHappyNumber(number)
 
     let count = 0
     for(let i = 0; i < stringNum.length; i++) {
-    count = Math.pow(Number(stringNum[i]), 2) + count
+    count += Math.pow(Number(stringNum[i]), 2)
 
      }
 
@@ -935,5 +935,5 @@ breakPalindrome("aa")
 
 const isValid = (parenthesis) => {
     const theParenthesis = {'[':']', '{': '}', '(':')'}
-    
+
 };
