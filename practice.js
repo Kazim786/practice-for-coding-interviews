@@ -971,17 +971,14 @@ const isValid = (parenthesis) => {
     if(typeof(parenthesis) !== "string" ){
       return false
     }
-    const bracketArr = (parenthesis).split("")
-    console.log(bracketArr)
-    for(let bracket = 0; bracket < bracketArr.length; bracket++){
-      if(bracketArr.length % 2 === 0){
+    
+      if(parenthesis.length % 2 === 0){
         return true
       }
        else{
          return false
        }
-    }
 };
 
-let p = '(({[]})'
+let p = '(({[]}))'
 console.log(isValid(p))
