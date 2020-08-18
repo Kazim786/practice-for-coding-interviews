@@ -613,7 +613,7 @@ isValidParenthesis(pt)
 num = 19
 
 
-function isHappyNumber(number)
+const isHappyNumber = (number) =>
 {
 
   if(number === 1)
@@ -628,7 +628,7 @@ function isHappyNumber(number)
     for(let i = 0; i < stringNum.length; i++) {
     count += Math.pow(Number(stringNum[i]), 2)
 
-     }
+    }
 
   number = count
   console.log(number)
@@ -936,6 +936,6 @@ breakPalindrome("aa")
 
 const isValid = (parenthesis) => {
     const theParenthesis = {'[':']', '{': '}', '(':')'}
-    
+
 
 };
