@@ -965,20 +965,62 @@ let p = '(({[]}))'
 console.log(isValid(p))
 
 
-//Tried a different approach
+//Tried a different approach - Failed
+
+// const isValid = (parenthesis) => {
+//     if(typeof(parenthesis) !== "string" ){
+//       return false
+//     }
+    
+//       if(parenthesis.length % 2 === 0){
+//         return true
+//       }
+//        else{
+//          return false
+//        }
+// };
+
+// let p = '(({[]}))'
+// console.log(isValid(p))
+
+//This one failed at this "(]"
+
+
+//Another approach - This one also failed with "(]"
 
 const isValid = (parenthesis) => {
     if(typeof(parenthesis) !== "string" ){
       return false
     }
+    const countLeft = {}
+    const countRight = {}
     
-      if(parenthesis.length % 2 === 0){
-        return true
-      }
-       else{
-         return false
-       }
-};
-
+     //check and see if the number of the 
+     //left side is equal to the number of the closing brackets (right side)
+        for(let i = 0; i < parenthesis.length; i++){
+            if(!countLeft[parenthesis[i]] && parenthesis[i] === "{" || parenthesis[i] === '[' || parenthesis[i] === '(' ){
+            countLeft[parenthesis[i]] = 1
+            }
+            else {
+                countLeft[parenthesis[i]]++
+            }
+        };
+        for(let i = 0; i < parenthesis.length; i++){
+            if(!countRight[parenthesis[i]] && parenthesis[i] === "{" || parenthesis[i] === '[' || parenthesis[i] === '(' ){
+                countRight[parenthesis[i]] = 1
+                }
+                else {
+                    countRight[parenthesis[i]]++
+                }
+        }
+        for(let bracket in countLeft){
+            if(countLeft[bracket] === countRight[bracket]){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+    }
 let p = '(({[]}))'
 console.log(isValid(p))
