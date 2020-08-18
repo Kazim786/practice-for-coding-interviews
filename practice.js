@@ -822,29 +822,29 @@ function fizzBuzz(n) {
 //breakPalindrome("hssh") This test case proves the code isnt foolproof
 
 
-//CAME UP WITH THE BETTER SOLUTION WHICH WORKS WITH THIS TEST CASE TOO:
+//CAME UP WITH THE BETTER SOLUTION WHICH WORKS WITH THIS TEST CASE TOO BUT IT STILL HAS FLAWS:
 
 
-const breakPalindrome = (palindrome) => {
-    if(palindrome.length === 1){
-        return ""
-    } 
+// const breakPalindrome = (palindrome) => {
+//     if(palindrome.length === 1){
+//         return ""
+//     } 
  
-  let palindrome2 = ''
+//   let palindrome2 = ''
 
-  for(let i = 0; i < palindrome.length; i++){
-    if(palindrome[palindrome.length -1] === palindrome[0])
-    {
-      // console.log(char)
-      palindrome2 = palindrome.replace(palindrome[1], palindrome[palindrome.length - 1])
+//   for(let i = 0; i < palindrome.length; i++){
+//     if(palindrome[palindrome.length -1] === palindrome[0])
+//     {
+//       // console.log(char)
+//       palindrome2 = palindrome.replace(palindrome[1], palindrome[palindrome.length - 1])
      
-    }
-  return palindrome2
-};
-}
+//     }
+//   return palindrome2
+// };
+// }
 
 
-breakPalindrome("hssh")
+// breakPalindrome("hssh")
 
 
 
@@ -852,27 +852,39 @@ breakPalindrome("hssh")
 
 //This is newest version of the code
 
+
+//WORKS!!!!
 const breakPalindrome = (palindrome) => {
     if(palindrome.length === 1){
         return ""
     } 
- 
+  const alphabetArr = ("abcdefghijklmnopqrstuvwxyz").split("")
+
+  for(let letter of alphabetArr){
+
+  }
+
   let palindrome2 = ''
 
   for(let i = 0; i < palindrome.length; i++){
-     if(char > 1){
+     
        //have to replace with letter that isnt in the string so to avoid palindrome
       // console.log([char])
-
-      //This replacement is flawed because what is the entire string is full of the same letter
-      palindrome2 = palindrome.replace(palindrome[1], palindrome[palindrome.length - 1])
+      if(palindrome[1] !== alphabetArr[i]){
+        palindrome2 = palindrome.replace(palindrome[1], alphabetArr[i])
+      }
+      
     }
+    return palindrome2
   }
  
-return palindrome2
-}
+
 
 breakPalindrome("aaaa")
+breakPalindrome("aa")
+
+
+
 
 // meets this condition: replace exactly one character by any lowercase
 //Still leetcode is giving wrong answer error
