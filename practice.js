@@ -637,13 +637,14 @@ function isHappyNumber(number)
   {
     return true
   }
+
+  //Chose 4 and 0 because according to happy number documentation. For any number that doesnt result in 1. A series of various numbers will occur. This sequence of numbers shall begin with 4 
   else if (number === 4 || number === 0)
   {
     return false
   }
 
   }
-
 
 }
 
@@ -935,5 +936,6 @@ breakPalindrome("aa")
 
 const isValid = (parenthesis) => {
     const theParenthesis = {'[':']', '{': '}', '(':')'}
+    
 
 };
