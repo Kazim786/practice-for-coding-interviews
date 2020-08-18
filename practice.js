@@ -942,7 +942,7 @@ const isValid = (parenthesis) => {
      //check and see if the number of the 
      //left side is equal to the number of the closing brackets (right side)
         for(let i = 0; i < parenthesis.length; i++){
-            if(parenthesis[i] === '(' || parenthesis[i] === '{' || parenthesis[i] === '[' ||parenthesis[i] === ')' || parenthesis[i] === '}' || parenthesis[i] === ']'){
+            if(!countOfParen[parenthesis[i]]){
             countOfParen[parenthesis[i]] = 1
             }
             else {
@@ -950,6 +950,16 @@ const isValid = (parenthesis) => {
             }
         }
         for(let bracket in countOfParen) {
-            
+          console.log(countOfParen[bracket])
+          //This countOfParen[bracket] will show the number 
+          //if it equals the length then we return true
+          let total = countOfParen[bracket] + countOfParen[bracket] 
+          console.log(total)
+         
+        
         }
+        console.log(countOfParen)
 };
+
+let p = '(({[]}))'
+console.log(isValid(p))
