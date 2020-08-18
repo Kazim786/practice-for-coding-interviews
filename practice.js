@@ -1006,21 +1006,24 @@ const isValid = (parenthesis) => {
             }
         };
         for(let i = 0; i < parenthesis.length; i++){
-            if(!countRight[parenthesis[i]] && parenthesis[i] === "{" || parenthesis[i] === '[' || parenthesis[i] === '(' ){
+            if(!countRight[parenthesis[i]] && parenthesis[i] === "}" || parenthesis[i] === ']' || parenthesis[i] === ')' ){
                 countRight[parenthesis[i]] = 1
                 }
                 else {
                     countRight[parenthesis[i]]++
                 }
         }
-        for(let bracket in countLeft){
-            if(countLeft[bracket] === countRight[bracket]){
-                return true
-            }
-            else{
-                return false
-            }
-        }
-    }
-let p = '(({[]}))'
-console.log(isValid(p))
+        // //for(let bracket in countLeft){
+        //     if(countLeft[bracket] + countLeft[bracket] === countRight[bracket] + countRight[bracket]){
+        //         return true
+        //     }
+        //     else{
+        //         return false
+        //     }
+        // }
+
+        console.log(countLeft) 
+        console.log(countRight) 
+
+    }      
+console.log(isValid('(]'))
