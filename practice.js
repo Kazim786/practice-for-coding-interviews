@@ -658,7 +658,7 @@ isHappyNumber(num)
 function fizzBuzz(n) { 
   
     for(let i = 1; i <= n; i++){ 
-      
+       //Any number that is a multiple of 3 & 5 will be divisible by 15.
        if(i % 15 === 0){ 
          console.log('fizzbuzz') 
          }
@@ -1066,3 +1066,5 @@ const addDigits = (num) => {
   console.log(num)
 };
 addDigits(38)
+
+//keep getting a bunch of numbers in the console
