@@ -862,7 +862,8 @@ function fizzBuzz(n) {
 //This is newest version of the code
 
 
-//WORKS!!!!
+//WORKS!!!!************
+
 const breakPalindrome = (palindrome) => {
     if(palindrome.length === 1){
         return ""
@@ -1040,7 +1041,7 @@ const isValid = (parenthesis) => {
 console.log(isValid('(]'))
 
 //Corrected version of my code for isValid parenthesis: 
-
+//IT WORKS **************
 const isValid = (str) => {
     let stack = [];
     let map = {
@@ -1083,6 +1084,8 @@ const isValid = (str) => {
 // Explanation: The process is like: 3 + 8 = 11, 1 + 1 = 2. 
 // Since 2 has only one digit, return it.
 
+
+//IT WORKS!!!! ***********
 const addDigits = (num) => {
   
     while(num > 9){
