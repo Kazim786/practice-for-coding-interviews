@@ -1054,15 +1054,20 @@ console.log(isValid('(]'))
 // Since 2 has only one digit, return it.
 
 const addDigits = (num) => {
+  
     while(num > 9){
       let strNum = num.toString()
+      let count = 0;
+      console.log(strNum)
       for(let i = 0; i < strNum.length; i++){
-        num += Number(strNum[i])
+        count += Number(strNum[i])
+      
         //while number is greater than 9 we have to keep going
         
       }
-          
+    
     }
+    num = count
   console.log(num)
 };
 addDigits(38)
