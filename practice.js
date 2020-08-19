@@ -1095,11 +1095,10 @@ const addDigits = (num) => {
         //while number is greater than 9 we have to keep going
         
       }
-    
+      num = count; //moved to last statement of each iteration
     }
-    num = count
+    
   console.log(num)
 };
-addDigits(38)
 
 //keep getting a bunch of numbers in the console
