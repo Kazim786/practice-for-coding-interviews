@@ -990,7 +990,7 @@ console.log(isValid(p))
 
 const isValid = (parenthesis) => {
     if(typeof(parenthesis) !== "string" ){
-      return false
+        return false
     }
     const countLeft = {}
     const countRight = {}
@@ -1013,14 +1013,23 @@ const isValid = (parenthesis) => {
                     countRight[parenthesis[i]]++
                 }
         }
-        // //for(let bracket in countLeft){
-        //     if(countLeft[bracket] + countLeft[bracket] === countRight[bracket] + countRight[bracket]){
-        //         return true
-        //     }
-        //     else{
-        //         return false
-        //     }
-        // }
+        for(let bracket in countLeft){
+            if(countRight[bracket]){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+
+        for(let bracket in countRight){
+            if(countleft[bracket]){
+                return true
+            }
+            else{
+                return false
+            }
+        }
 
         console.log(countLeft) 
         console.log(countRight) 
