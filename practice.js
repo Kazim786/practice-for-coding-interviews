@@ -1013,6 +1013,8 @@ const isValid = (parenthesis) => {
                     countRight[parenthesis[i]]++
                 }
         }
+
+        //The only issue with this is that it cant detect opposite sides of the bracket. It will only search for the same side in the other object
         for(let bracket in countLeft){
             if(countRight[bracket]){
                 return true
