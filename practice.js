@@ -1039,6 +1039,35 @@ const isValid = (parenthesis) => {
     }      
 console.log(isValid('(]'))
 
+//Corrected version of my code for isValid parenthesis: 
+
+const isValid = (parenthesis) => {
+    if(typeof(parenthesis) !== "string" ){
+        return false
+    }
+    const stack = []
+    const mapClosingBrackets = {
+        "{":"}",
+        "[":"]",
+        "(":")"
+    }
+    const characters = parenthesis.split("")
+    for(let i = 0; i < characters.length; i++){
+        if(characters[i] === "{" || characters[i] === '[' || characters[i] === '(' ){
+            stack.push(characters[i])
+        }
+        else if(characters[i] === "}" || characters[i] === ']' || characters[i] === ')' ){
+            let poppedValue = stack.pop()
+            if(mapClosingBrackets[poppedValue]!=characters[i]){
+                return false
+            }
+        }
+    }
+
+    if(stack.length) return false
+    return true
+    }  
+
 //LINE 611 AND 554 HAVE THE HAPPY NUMBER AND VALID PARENTHESIS QUESTIONS
 //**************************** */
 
