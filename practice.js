@@ -1038,3 +1038,31 @@ const isValid = (parenthesis) => {
 
     }      
 console.log(isValid('(]'))
+
+//LINE 611 AND 554 HAVE THE HAPPY NUMBER AND VALID PARENTHESIS QUESTIONS
+//**************************** */
+
+//258. Add Digits
+
+// Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
+
+// Example:
+
+// Input: 38
+// Output: 2 
+// Explanation: The process is like: 3 + 8 = 11, 1 + 1 = 2. 
+// Since 2 has only one digit, return it.
+
+const addDigits = (num) => {
+    while(num > 9){
+      let strNum = num.toString()
+      for(let i = 0; i < strNum.length; i++){
+        num += Number(strNum[i])
+        //while number is greater than 9 we have to keep going
+        
+      }
+          
+    }
+  console.log(num)
+};
+addDigits(38)
