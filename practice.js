@@ -772,7 +772,7 @@ function fizzBuzz(n) {
 //design an algorithm to find the maximum profit.!!!!
 
 //So like in example 1, the max profit would be subtracting 1 with 6
-        var maxProfit = function(prices) {
+        var maxProfit = function(prices, day) {
             //selling price > buying price
             //you can only buy 1 and sell 1 stock
             //if no transaction is done the max-profit should return 0
