@@ -1101,7 +1101,7 @@ const addDigits = (num) => {
       num = count; //moved to last statement of each iteration
     }
     
-  console.log(num)
+  return num
 };
 
 //keep getting a bunch of numbers in the console
