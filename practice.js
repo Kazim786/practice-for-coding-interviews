@@ -1164,11 +1164,22 @@ const numbers = [0,0,1,1,1,2,2,3,3,4]
 
 const removeDuplicates = (nums) => {
     nums.sort()
+    const newArr = []
 
-    const newArr = nums.map((i) => {
+    //or just count how many numbers there are excluding their duplicates
+
+    for(let i = 0; i < nums.length; i++){
+        for(let j = 0; j < nums.length; j++){
+            if(!nums[j] === nums[i]){
+                newArr.push(nums[i]);
+            }
+
+        }
         
-    })
+    }
 
+    
+    return newArr.length
 
     //return length
 };
