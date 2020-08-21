@@ -1160,3 +1160,9 @@ isHappyNumber(num)
 
 //Plan of action: Make a mapped array and return its length
 
+const removeDuplicates = (nums) => {
+    
+
+
+    //return length
+};
