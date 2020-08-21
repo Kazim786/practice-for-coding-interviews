@@ -1171,7 +1171,7 @@ const removeDuplicates = (nums) => {
     for(let i = 0; i < nums.length; i++){
         for(let j = 0; j < nums.length; j++){
           
-            if(!nums[i] === nums[j]){
+            if(nums[i] !== nums[j]){
                  newArr.push(nums[i]);
                 
             }
