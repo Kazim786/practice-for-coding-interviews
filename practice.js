@@ -1160,8 +1160,14 @@ isHappyNumber(num)
 
 //Plan of action: Make a mapped array and return its length
 
+const numbers = [0,0,1,1,1,2,2,3,3,4]
+
 const removeDuplicates = (nums) => {
-    
+    nums.sort()
+
+    const newArr = nums.map((i) => {
+        
+    })
 
 
     //return length
