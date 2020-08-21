@@ -1185,3 +1185,65 @@ const removeDuplicates = (nums) => {
 
     //return length
 };
+
+
+
+//*********** */
+//Minimum coins
+
+const minimumCoins = (value) => {
+
+    let minCoins = 0 
+  
+    while (value > 0) {
+      if (value >= 5) {
+        value = value - 5
+      }
+      else if(value >= 3) {
+        value = value - 3
+      }
+      else if(value >= 1) {
+        value = value - 1
+      }
+  
+      minCoins = minCoins + 1
+    }
+  
+  return minCoins
+  }
+  
+  
+  minimumCoins(13)
+
+  //Another way
+
+  function minimumCoins2(value) {
+    let minCoins = 0
+    
+    if (value >= 5) {
+      //console.log(Math.floor(value/5))
+      minCoins = minCoins + Math.floor(value/5)
+      value = value % 5
+    }
+    
+    if (value >= 3) {
+    //console.log(Math.floor(value/3))
+    minCoins = minCoins + Math.floor(value/3)
+    value = value % 3
+  
+    }
+  
+    if (value >= 1) {
+   // console.log(Math.floor(value/1))
+    minCoins = minCoins + Math.floor(value/1)
+    value = value % 1
+  
+    }
+  
+    return minCoins
+  }
+  
+  
+  minimumCoins2(13)
+  
+  
