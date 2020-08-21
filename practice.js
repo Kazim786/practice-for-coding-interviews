@@ -1247,3 +1247,8 @@ const minimumCoins = (value) => {
   minimumCoins2(13)
   
   
+  //********************** */
+
+        const missingNumber = (nums) => {
+            
+        };
