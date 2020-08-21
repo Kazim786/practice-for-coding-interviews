@@ -1170,15 +1170,17 @@ const removeDuplicates = (nums) => {
 
     for(let i = 0; i < nums.length; i++){
         for(let j = 0; j < nums.length; j++){
-            if(!nums[j] === nums[i]){
-                newArr.push(nums[i]);
+          
+            if(!nums[i] === nums[j]){
+                 newArr.push(nums[i]);
+                
             }
 
         }
-        
+         
     }
 
-    
+    console.log(newArr)
     return newArr.length
 
     //return length
