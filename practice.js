@@ -1271,4 +1271,5 @@ const minimumCoins = (value) => {
         const missingNumber = (nums) => {
                 nums.sort()
                 //look at different array methods like splice or reducer or map
+                //look at sections 5 & 10 in the JS Bootcamp
         };
