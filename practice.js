@@ -935,110 +935,110 @@ breakPalindrome("aa")
 // Output: true
 
 
-const isValid = (parenthesis) => {
-    if(typeof(parenthesis) !== "string" ){
-      return false
-    }
-    const countOfParen = {}
-     //check and see if the number of the 
-     //left side is equal to the number of the closing brackets (right side)
-        for(let i = 0; i < parenthesis.length; i++){
-            if(!countOfParen[parenthesis[i]]){
-            countOfParen[parenthesis[i]] = 1
-            }
-            else {
-                countOfParen[parenthesis[i]]++
-            }
-        }
-        for(let bracket in countOfParen) {
-          console.log(countOfParen[bracket])
-          //This countOfParen[bracket] will show the number 
-          //if it equals the length then we return true
-          let total = countOfParen[bracket] + countOfParen[bracket] 
-          console.log(total)
-         
-        
-        }
-        console.log(countOfParen)
-};
-
-let p = '(({[]}))'
-console.log(isValid(p))
-
-
-//Tried a different approach - Failed
-
 // const isValid = (parenthesis) => {
 //     if(typeof(parenthesis) !== "string" ){
 //       return false
 //     }
-    
-//       if(parenthesis.length % 2 === 0){
-//         return true
-//       }
-//        else{
-//          return false
-//        }
+//     const countOfParen = {}
+//      //check and see if the number of the 
+//      //left side is equal to the number of the closing brackets (right side)
+//         for(let i = 0; i < parenthesis.length; i++){
+//             if(!countOfParen[parenthesis[i]]){
+//             countOfParen[parenthesis[i]] = 1
+//             }
+//             else {
+//                 countOfParen[parenthesis[i]]++
+//             }
+//         }
+//         for(let bracket in countOfParen) {
+//           console.log(countOfParen[bracket])
+//           //This countOfParen[bracket] will show the number 
+//           //if it equals the length then we return true
+//           let total = countOfParen[bracket] + countOfParen[bracket] 
+//           console.log(total)
+         
+        
+//         }
+//         console.log(countOfParen)
 // };
 
 // let p = '(({[]}))'
 // console.log(isValid(p))
 
-//This one failed at this "(]"
 
+// //Tried a different approach - Failed
 
-//Another approach - This one also failed with "(]"
-
-const isValid = (parenthesis) => {
-    if(typeof(parenthesis) !== "string" ){
-        return false
-    }
-    const countLeft = {}
-    const countRight = {}
+// // const isValid = (parenthesis) => {
+// //     if(typeof(parenthesis) !== "string" ){
+// //       return false
+// //     }
     
-     //check and see if the number of the 
-     //left side is equal to the number of the closing brackets (right side)
-        for(let i = 0; i < parenthesis.length; i++){
-            if(!countLeft[parenthesis[i]] && parenthesis[i] === "{" || parenthesis[i] === '[' || parenthesis[i] === '(' ){
-            countLeft[parenthesis[i]] = 1
-            }
-            else {
-                countLeft[parenthesis[i]]++
-            }
-        };
-        for(let i = 0; i < parenthesis.length; i++){
-            if(!countRight[parenthesis[i]] && parenthesis[i] === "}" || parenthesis[i] === ']' || parenthesis[i] === ')' ){
-                countRight[parenthesis[i]] = 1
-                }
-                else {
-                    countRight[parenthesis[i]]++
-                }
-        }
+// //       if(parenthesis.length % 2 === 0){
+// //         return true
+// //       }
+// //        else{
+// //          return false
+// //        }
+// // };
 
-        //The only issue with this is that it cant detect opposite sides of the bracket. It will only search for the same side in the other object
-        for(let bracket in countLeft){
-            if(countRight[bracket]){
-                return true
-            }
-            else{
-                return false
-            }
-        }
+// // let p = '(({[]}))'
+// // console.log(isValid(p))
 
-        for(let bracket in countRight){
-            if(countleft[bracket]){
-                return true
-            }
-            else{
-                return false
-            }
-        }
+// //This one failed at this "(]"
 
-        console.log(countLeft) 
-        console.log(countRight) 
 
-    }      
-console.log(isValid('(]'))
+// //Another approach - This one also failed with "(]"
+
+// const isValid = (parenthesis) => {
+//     if(typeof(parenthesis) !== "string" ){
+//         return false
+//     }
+//     const countLeft = {}
+//     const countRight = {}
+    
+//      //check and see if the number of the 
+//      //left side is equal to the number of the closing brackets (right side)
+//         for(let i = 0; i < parenthesis.length; i++){
+//             if(!countLeft[parenthesis[i]] && parenthesis[i] === "{" || parenthesis[i] === '[' || parenthesis[i] === '(' ){
+//             countLeft[parenthesis[i]] = 1
+//             }
+//             else {
+//                 countLeft[parenthesis[i]]++
+//             }
+//         };
+//         for(let i = 0; i < parenthesis.length; i++){
+//             if(!countRight[parenthesis[i]] && parenthesis[i] === "}" || parenthesis[i] === ']' || parenthesis[i] === ')' ){
+//                 countRight[parenthesis[i]] = 1
+//                 }
+//                 else {
+//                     countRight[parenthesis[i]]++
+//                 }
+//         }
+
+//         //The only issue with this is that it cant detect opposite sides of the bracket. It will only search for the same side in the other object
+//         for(let bracket in countLeft){
+//             if(countRight[bracket]){
+//                 return true
+//             }
+//             else{
+//                 return false
+//             }
+//         }
+
+//         for(let bracket in countRight){
+//             if(countleft[bracket]){
+//                 return true
+//             }
+//             else{
+//                 return false
+//             }
+//         }
+
+//         console.log(countLeft) 
+//         console.log(countRight) 
+
+//     }      
+// console.log(isValid('(]'))
 
 //Corrected version of my code for isValid parenthesis: 
 //IT WORKS **************
@@ -1105,3 +1105,44 @@ const addDigits = (num) => {
 };
 
 //keep getting a bunch of numbers in the console
+
+//******************* */
+//Happy Number
+
+const isHappyNumber = (number) =>
+{
+
+  if(number === 1)
+  {
+    return true
+  }
+  
+  while(number !== 1) {
+    let stringNum = number.toString()
+
+    let count = 0
+    for(let i = 0; i < stringNum.length; i++) {
+    count += Math.pow(Number(stringNum[i]), 2)
+
+    }
+
+  number = count
+  console.log(number)
+
+  if(number === 1)
+  {
+    return true
+  }
+
+  //Chose 4 and 0 because according to happy number documentation. For any number that doesnt result in 1. A series of various numbers will occur. This sequence of numbers shall begin with 4 
+  else if (number === 4 || number === 0)
+  {
+    return false
+  }
+
+  }
+
+}
+
+
+isHappyNumber(num)
