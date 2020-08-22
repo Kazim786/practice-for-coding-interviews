@@ -1272,4 +1272,10 @@ const minimumCoins = (value) => {
                 nums.sort()
                 //look at different array methods like splice or reducer or map
                 //look at sections 5 & 10 in the JS Bootcamp
+                //if nums(i + 1) - nums[i] !== 1
+                for(let i = 0; i < nums.length; i++){
+                    if(nums[i + 1] - nums[i] !== 1){
+                        return nums[i] - 1;
+                    }
+                }
         };
