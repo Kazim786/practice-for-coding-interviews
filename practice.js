@@ -1275,7 +1275,7 @@ const minimumCoins = (value) => {
                 //if nums(i + 1) - nums[i] !== 1
                 for(let i = 0; i < nums.length; i++){
                     if(nums[i + 1] - nums[i] !== 1){
-                        return nums[i] - 1;
+                        return nums[i+ 1] - 1;
                     }
                 }
         };
