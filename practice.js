@@ -1457,3 +1457,15 @@ const numDecodings = (s) => {
     }
 };
 //getting it wrong for testcase 0
+
+
+//*************** */
+
+//turn the first letter of a string to capslock
+
+let str = "hi my name is Kazim"
+const stringUpper = (string) => {
+
+return string.replace(string[0], string[0].toLocaleUpperCase())
+
+}
