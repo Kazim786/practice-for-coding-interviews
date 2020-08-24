@@ -1282,3 +1282,29 @@ const minimumCoins = (value) => {
         };
 
 //******************** */
+
+//Best time to buy and sale stock
+
+var stockList = [7, 5, 3, 2, 1, 0]
+
+function MaxProfitInStockMarket(stockPrice)
+{
+  var maxProfit = 0
+  var minNum = Number.MAX_VALUE
+  var maxNum = 0
+
+  for(var newPrice = 0; newPrice < stockPrice.length; newPrice++)
+  {
+    if(stockPrice[newPrice] < minNum)
+    {
+      minNum = stockPrice[newPrice]
+    }
+
+    maxProfit = Math.max(maxProfit,stockPrice[newPrice] - minNum)
+  
+  }
+
+  return maxProfit
+}
+
+MaxProfitInStockMarket(stockList)
