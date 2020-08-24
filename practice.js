@@ -1193,6 +1193,7 @@ const removeDuplicates = (nums) => {
 
 const minimumCoins = (value) => {
 
+    //Keeps count of the coins
     let minCoins = 0 
   
     while (value > 0) {
@@ -1205,7 +1206,7 @@ const minimumCoins = (value) => {
       else if(value >= 1) {
         value = value - 1
       }
-  
+      //Increments coins
       minCoins = minCoins + 1
     }
   
@@ -1279,3 +1280,5 @@ const minimumCoins = (value) => {
                     }
                 }
         };
+
+//******************** */
