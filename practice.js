@@ -1447,6 +1447,10 @@ const numDecodings = (s) => {
     
     if(s !== "0"){
         return s.length
+        //i return the length because 
+        //i noticed from the examples that the outputs matched the length. 
+        //since every digit represents a letter. 
+        //And every letter is a way to do the problem
     }
     else if(s === "0"){
         return 0
