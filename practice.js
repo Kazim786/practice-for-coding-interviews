@@ -1535,26 +1535,48 @@ A Letter
 //
 
 const capsFirstLetter = (str) => {
-  
- 
+
     //Capitalied first letter
     let newStr = str.replace(str[0], str[0].toLocaleUpperCase())
-    
-   let whiteSpace = str.indexOf(" ")
-   console.log(whiteSpace)
-    
-   let secondLetter = whiteSpace + 1
+
+    for(let i = 1; i < str.length; i++){
+
+        if(strArray[i] === " "){ 
+            strArray[i + 1].toLocaleUpperCase()
+            
+            // Or we might have to make it into a string again 
+            
+            strArray[i+1] = strArray[i + 1].join().toLocaleUpperCase()
+
+            // or we might have to do this by turning this back into a string:
+            // let whiteSpace = str.indexOf(" ")
+            //    let secondLetter = whiteSpace + 1
    
-   //Capitalized second letter
-   let upperCasedSecond = str.charAt(secondLetter).toLocaleUpperCase()
+            //    //Capitalized second letter
+            //    let upperCasedSecond = str.charAt(secondLetter).toLocaleUpperCase()
+            //    newStr.replace(secondLetter, upperCasedSecond)
+            //   newStr[secondLetter] = upperCasedSecond
+            }
+
+    }
     
-    console.log(upperCasedSecond)
-   //str.replace(str[0], str[0].toLocaleUpperCase())
+
     
-   newStr.replace(secondLetter, upperCasedSecond)
-  newStr[secondLetter] = upperCasedSecond
+//    let whiteSpace = str.indexOf(" ")
+//    console.log(whiteSpace)
+    
+//    let secondLetter = whiteSpace + 1
+   
+//    //Capitalized second letter
+//    let upperCasedSecond = str.charAt(secondLetter).toLocaleUpperCase()
+    
+//     console.log(upperCasedSecond)
+//    //str.replace(str[0], str[0].toLocaleUpperCase())
+    
+//    newStr.replace(secondLetter, upperCasedSecond)
+//   newStr[secondLetter] = upperCasedSecond
   
-  console.log(newStr)
+//   console.log(newStr)
     
     return newStr
     
