@@ -1444,39 +1444,51 @@ const breakPalindrome = (palindrome) => {
 // Explanation: It could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
 
 const numDecodings = (s) => {
-    const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
-    //write an object with alphabets. The numbers will be keys and the letters will be value
+    // const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
+    // //write an object with alphabets. The numbers will be keys and the letters will be value
     
     const alphaObject = {
         1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f', 7: 'g', 8: 'h', 9: 'i', 10: 'j', 11: 'k', 12: 'l', 13: 'm', 14: 'n', 15: 'o', 16: 'p', 17: 'q', 18: 'r', 19: 's', 20: 't', 21: 'u', 22: 'v', 23: 'w', 24: 'x', 25: 'y', 26: 'z'
 
 }
 
+const countObj = {}
+// console.log()
 
 
-    if(s !== "0"){
-        return s.length
+
+    if(s >= "11"){
+      s.split('')
+        if(!countObj[alphaObject[s]]){
+         return countObj[alphaObject[s]] = 1
+        }
+        
         //i return the length because 
         //i noticed from the examples that the outputs matched the length. 
         //since every digit represents a letter. 
         //And every letter is a way to do the problem
     }
+    else if(s <= "10"){
+        return 1
+    }
     else if(s === "0"){
         return 0
     }
-    else if(s.length >= 4){
-        //test case 1223
-        //abbc
-        //lw
-        //abw
-        //lbc
-        //avc
-        return s.length + 2
+    // else if(s.length >= 4){
+    //     //test case 1223
+    //     //abbc
+    //     //lw
+    //     //abw
+    //     //lbc
+    //     //avc
+    //     // return s.length + 2
+    //     s.alphaObject
 
-    }
+    // }
 };
 //getting it wrong for testcase 0
 
+numDecodings(14)
 
 //*************** */
 
@@ -1488,3 +1500,73 @@ const stringUpper = (string) => {
 return string.replace(string[0], string[0].toLocaleUpperCase())
 
 }
+
+
+//
+Capitalize Words
+Programming challenge description:
+Write a program which capitalizes the first letter of each word in a sentence.
+Input:
+Your program should read lines from standard input. Each line has a sequence of words.
+Output:
+Print the capitalized words.
+Test 1
+Test Input
+Download Test 1 Input
+Hello world
+Expected Output
+Download Test 1 Input
+Hello World
+Test 2
+Test Input
+Download Test 2 Input
+a letter
+Expected Output
+Download Test 2 Input
+A Letter
+
+
+
+//Put string in the parameter of the function
+//
+
+
+//Put string in the parameter of the function
+//
+
+const capsFirstLetter = (str) => {
+  
+ 
+    //Capitalied first letter
+    let newStr = str.replace(str[0], str[0].toLocaleUpperCase())
+    
+   let whiteSpace = str.indexOf(" ")
+   console.log(whiteSpace)
+    
+   let secondLetter = whiteSpace + 1
+   
+   //Capitalized second letter
+   let upperCasedSecond = str.charAt(secondLetter).toLocaleUpperCase()
+    
+    console.log(upperCasedSecond)
+   //str.replace(str[0], str[0].toLocaleUpperCase())
+    
+   newStr.replace(secondLetter, upperCasedSecond)
+  newStr[secondLetter] = upperCasedSecond
+  
+  console.log(newStr)
+    
+    return newStr
+    
+    
+    
+    
+  }
+  capsFirstLetter('hello world')
+
+
+
+
+  //******* */
+
+
