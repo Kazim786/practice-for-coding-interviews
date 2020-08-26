@@ -1531,15 +1531,17 @@ const capsFirstLetter = (str) => {
 
     //Capitalied first letter
     let newStr = str.replace(str[0], str[0].toLocaleUpperCase())
+    //turned string into array to easily access different elements of the string
     const strArray = newStr.split('')
 
-    for(let i = 1; i < str.length; i++){
+    //used for loop to easily access the contents of the Array
+    for(let i = 1; i < strArray.length; i++){
 
         if(strArray[i] === " "){ 
             // strArray[i + 1].toLocaleUpperCase()
             
             
-            
+            //Uppercase the letter which comes after white space, i.e. the first letter of the second word 
             strArray[i+1] = strArray[i + 1].toLocaleUpperCase()
             // console.log(strArray[i+1])
             
@@ -1547,6 +1549,7 @@ const capsFirstLetter = (str) => {
             }
 
     }
+    //returning the array as a string
     return strArray.join("")
     
   }
