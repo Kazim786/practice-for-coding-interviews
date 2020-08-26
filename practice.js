@@ -1554,8 +1554,7 @@ const capsFirstLetter = (str) => {
 
   capsFirstLetter('a letter i have')
   //Will this work for strings with any number of words?*************
-  capsFirstLetter('hello world')
-  //Will this work for strings with any number of words?*************
+  //IT WORKS FOR ANY NUMBER OF WORDS!!! IT WORKS
 
 
 
