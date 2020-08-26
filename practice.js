@@ -1550,6 +1550,7 @@ const capsFirstLetter = (str) => {
     return strArray.join("")
     
   }
+  capsFirstLetter('hussain ibn ali does not give allegiance to a man like him')
   capsFirstLetter('hello world')
 
   capsFirstLetter('a letter i have')
