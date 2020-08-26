@@ -1503,36 +1503,29 @@ return string.replace(string[0], string[0].toLocaleUpperCase())
 
 
 //
-Capitalize Words
-Programming challenge description:
-Write a program which capitalizes the first letter of each word in a sentence.
-Input:
-Your program should read lines from standard input. Each line has a sequence of words.
-Output:
-Print the capitalized words.
-Test 1
-Test Input
-Download Test 1 Input
-Hello world
-Expected Output
-Download Test 1 Input
-Hello World
-Test 2
-Test Input
-Download Test 2 Input
-a letter
-Expected Output
-Download Test 2 Input
-A Letter
+// Capitalize Words
+// Programming challenge description:
+// Write a program which capitalizes the first letter of each word in a sentence.
+// Input:
+// Your program should read lines from standard input. Each line has a sequence of words.
+// Output:
+// Print the capitalized words.
+// Test 1
+// Test Input
+// Download Test 1 Input
+// Hello world
+// Expected Output
+// Download Test 1 Input
+// Hello World
+// Test 2
+// Test Input
+// Download Test 2 Input
+// a letter
+// Expected Output
+// Download Test 2 Input
+// A Letter
 
 
-
-//Put string in the parameter of the function
-//
-
-
-//Put string in the parameter of the function
-//
 
 const capsFirstLetter = (str) => {
 
@@ -1543,45 +1536,24 @@ const capsFirstLetter = (str) => {
     for(let i = 1; i < str.length; i++){
 
         if(strArray[i] === " "){ 
-            strArray[i + 1].toLocaleUpperCase()
+            // strArray[i + 1].toLocaleUpperCase()
             
-            // Or we might have to make it into a string again 
             
-            strArray[i+1] = strArray[i + 1].join().toLocaleUpperCase()
-            console.log(strArray[i+1])
-            // or we might have to do this by turning this back into a string:
-            // let whiteSpace = str.indexOf(" ")
-            //    let secondLetter = whiteSpace + 1
-   
-            //    //Capitalized second letter
-            //    let upperCasedSecond = str.charAt(secondLetter).toLocaleUpperCase()
-            //    newStr.replace(secondLetter, upperCasedSecond)
-            //   newStr[secondLetter] = upperCasedSecond
+            
+            strArray[i+1] = strArray[i + 1].toLocaleUpperCase()
+            // console.log(strArray[i+1])
+            
+            
             }
 
     }
-    
-
-    
-//    let whiteSpace = str.indexOf(" ")
-//    console.log(whiteSpace)
-    
-//    let secondLetter = whiteSpace + 1
-   
-//    //Capitalized second letter
-//    let upperCasedSecond = str.charAt(secondLetter).toLocaleUpperCase()
-    
-//     console.log(upperCasedSecond)
-//    //str.replace(str[0], str[0].toLocaleUpperCase())
-    
-//    newStr.replace(secondLetter, upperCasedSecond)
-//   newStr[secondLetter] = upperCasedSecond
-  
-//   console.log(newStr)
-    
-    return newStr
+    return strArray.join("")
     
   }
+  capsFirstLetter('hello world')
+
+  capsFirstLetter('a letter i have')
+  //Will this work for strings with any number of words?*************
   capsFirstLetter('hello world')
   //Will this work for strings with any number of words?*************
 
