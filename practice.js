@@ -1538,6 +1538,7 @@ const capsFirstLetter = (str) => {
 
     //Capitalied first letter
     let newStr = str.replace(str[0], str[0].toLocaleUpperCase())
+    const strArray = newStr.split('')
 
     for(let i = 1; i < str.length; i++){
 
@@ -1547,7 +1548,7 @@ const capsFirstLetter = (str) => {
             // Or we might have to make it into a string again 
             
             strArray[i+1] = strArray[i + 1].join().toLocaleUpperCase()
-
+            console.log(strArray[i+1])
             // or we might have to do this by turning this back into a string:
             // let whiteSpace = str.indexOf(" ")
             //    let secondLetter = whiteSpace + 1
