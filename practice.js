@@ -1561,6 +1561,12 @@ const capsFirstLetter = (str) => {
   //IT WORKS FOR ANY NUMBER OF WORDS!!! IT WORKS
 
 
+  //****************** */
+
+  const maxArea = (height) => {
+    
+  };
+
 
 
   //******* */
